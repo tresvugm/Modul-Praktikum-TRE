@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Praktikum K26 - TRE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .header-modul { background-color: #1e3a8a; color: white; padding: 40px 0; border-bottom: 5px solid #3b82f6; }
+        .btn-back { color: #dbeafe; text-decoration: none; display: inline-flex; align-items: center; margin-bottom: 15px; }
+        .btn-back:hover { color: white; text-decoration: underline; }
+        .filter-btn.active { background-color: #1e3a8a; color: white; }
+    </style>
+</head>
+<body>
+
+    <header class="header-modul">
+        <div class="container">
+            <a href="index.html" class="btn-back"><i class="bi bi-arrow-left me-2"></i> Kembali ke Pilih Kurikulum</a>
+            <h1 class="fw-bold">Kurikulum 2026 (K26)</h1>
+            <p class="mb-0 opacity-75">Daftar Modul Praktikum Terintegrasi Teknologi Rekayasa Elektro</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-4">
+                
+                <div class="mb-4 d-flex gap-2 flex-wrap">
+                    <button class="btn btn-outline-primary btn-sm filter-btn active" onclick="filterSemester('All')">Semua Semester</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('1')">Semester 1</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('2')">Semester 2</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('3')">Semester 3</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('4')">Semester 4</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('5')">Semester 5</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('6')">Semester 6</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('7')">Semester 7</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table id="tabelModul" class="table table-striped table-hover table-bordered align-middle" style="width:100%">
+                        <thead class="table-dark">
+                            <tr>
+                                <th width="5%">No</th>
+                                <th width="15%">Kode</th>
+                                <th width="30%">Mata Kuliah (ID)</th>
+                                <th width="10%" class="text-center">Semester</th>
+                                <th width="5%" class="text-center">SKS</th>
+                                <th width="15%" class="text-center">Tahun Pembuatan</th>
+                                <th width="20%">Link Modul</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>SVRE264107</td>
+                                <td>Praktikum Pengukuran Listrik</td>
+                                <td class="text-center">1</td> 
+                                <td class="text-center">2</td>
+                                <td class="text-center">-</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary w-100" disabled>
+                                        <i class="bi bi-hourglass-split"></i> Akan dikembangkan
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2</td>
+                                <td>SVRE264108</td>
+                                <td>Praktikum Pemrograman Dasar</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/12DNMlkGY6EK7VlLfgK_v9e6PaluMuNTU/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>3</td>
+                                <td>SVRE264205</td>
+                                <td>Praktikum Kerja Bengkel 1</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1kx5CHkMxCHju78x63iUegJy5phptT_hU/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>SVRE264206</td>
+                                <td>Praktikum Desain Produk Teknik</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1_ZC8nQU3PoHeerFv8SPd_JM3objIAC5x/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>SVRE264207</td>
+                                <td>Praktikum Rangkaian Listrik</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">-</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary w-100" disabled>
+                                        <i class="bi bi-hourglass-split"></i> Akan dikembangkan
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>SVRE264208</td>
+                                <td>Praktikum Elektronika Dasar</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1n2Y8V941s6CoQoX1WvWSJNzSE-IG0DUs/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>SVRE264307</td>
+                                <td>Praktikum Mikrokontroler</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1m2-44PQZF31yvSMU2LIjtHQGYssvy4v1/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>SVRE264308</td>
+                                <td>Praktikum Mesin Listrik</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2023</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1jnzh98l2MLs3ejMBIIdgvVQ14hmCQKPW/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>SVRE264309</td>
+                                <td>Praktikum Instalasi Listrik Residensial</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/12CHsosel0ExTW84xu168tzYzsUlZXAxi/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>10</td>
+                                <td>SVRE264310</td>
+                                <td>Praktikum Gambar Instalasi Listrik</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/13dSjuXmSAS4Z-MN321AEBVWMRLOdGtCM/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>11</td>
+                                <td>SVRE264311</td>
+                                <td>Praktikum Kerja Bengkel 2</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2023</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1wXDyXixDmEVLIp-wR6mYvaT2kuLYyAtZ/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>12</td>
+                                <td>SVRE264407</td>
+                                <td>Praktikum Audit Energi</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2023</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/12YnPEF9uuNDJlpmOy6rClRRfNXrFmmfS/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>13</td>
+                                <td>SVRE264408</td>
+                                <td>Praktikum Proteksi Sistem Tenaga Listrik</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2023</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1PuUs5ImDdsXs221o5LLrSnB69jKqSvP8/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>14</td>
+                                <td>SVRE264409</td>
+                                <td>Praktikum Instalasi Listrik Industri</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2023</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1-5eiQUqQRSKyv0cqqJ_p5beOnooMcQC8/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>15</td>
+                                <td>SVRE264410</td>
+                                <td>Praktikum Distribusi Tenaga Listrik</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1bNKw-HuMnbDhjAYXvTmsednAusug2ywm/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>16</td>
+                                <td>SVRE264502</td>
+                                <td>Praktikum Teknik Pengaturan Mesin Listrik</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1uXBevRDGWCP-sX1eFdT5yfxGQ7q8B9Wx/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>17</td>
+                                <td>SVRE264503</td>
+                                <td>Praktikum Transmisi Tenaga Listrik</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1eKP7Qd78yE5JFHmJo_DQNIR6KxEVF6Jx/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>18</td>
+                                <td>SVRE264504</td>
+                                <td>Praktikum Energi Terbarukan</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2022</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1rvpa2aa3EiDzLCYIBVoxJIW-alUD6OfF/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>19</td>
+                                <td>SVRE264505</td>
+                                <td>Praktikum Elektronika Daya</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2022</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1bUCqAP480TSqr3MfOCNUJ4LdL_z4CuuJ/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>20</td>
+                                <td>SVRE264702</td>
+                                <td>Praktikum Optimisasi Sistem Tenaga Listrik</td>
+                                <td class="text-center">7</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">-</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary w-100" disabled>
+                                        <i class="bi bi-hourglass-split"></i> Akan dikembangkan
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>21</td>
+                                <td>SVRE264703</td>
+                                <td>Praktikum Otomasi Industri</td>
+                                <td class="text-center">7</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2025</td>
+                                <td>
+                                    <a href="https://drive.google.com/file/d/1bzWp2lAtqTkZQV8xj02nfhUEGYYmMnGC/view?usp=sharing" class="btn btn-sm btn-primary w-100">
+                                        <i class="bi bi-download"></i> Unduh Modul
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>22</td>
+                                <td>SVRE264704</td>
+                                <td>Praktikum Perencanaan Sistem Tenaga Listrik</td>
+                                <td class="text-center">7</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">-</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary w-100" disabled>
+                                        <i class="bi bi-hourglass-split"></i> Akan dikembangkan
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var table = $('#tabelModul').DataTable({
+                "language": { 
+                    "search": "Cari Modul:",
+                    "lengthMenu": "Tampilkan _MENU_ data",
+                    "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+                    "infoEmpty": "Tidak ada data yang ditemukan",
+                    "zeroRecords": "Pencarian tidak menemukan hasil"
+                }
+            });
+
+            // Fungsi filter dikembalikan menjadi filterSemester
+            window.filterSemester = function(semesterVal) {
+                $('.filter-btn').removeClass('active');
+                $(event.target).addClass('active');
+
+                // column(3) menunjuk pada kolom "Sem"
+                if(semesterVal === 'All') {
+                    table.column(3).search('').draw();
+                } else {
+                    table.column(3).search('^' + semesterVal + '$', true, false).draw();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
