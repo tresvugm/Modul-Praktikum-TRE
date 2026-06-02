@@ -16,9 +16,11 @@
         .btn-back { color: #dbeafe; text-decoration: none; display: inline-flex; align-items: center; margin-bottom: 15px; }
         .btn-back:hover { color: white; text-decoration: underline; }
         .filter-btn.active { background-color: #1e3a8a; color: white; }
-        .dropdown-item:hover {
-            background-color: #eff6ff;
-            color: #1e3a8a;
+        .dropdown-item:hover { background-color: #eff6ff; color: #1e3a8a; }
+        
+        /* Tambahan untuk iframe preview */
+        #previewIframe {
+            background-color: #e9ecef;
         }
     </style>
 </head>
@@ -132,9 +134,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/12DNMlkGY6EK7VlLfgK_v9e6PaluMuNTU/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Pemrograman Dasar" data-url="https://drive.google.com/file/d/12DNMlkGY6EK7VlLfgK_v9e6PaluMuNTU/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
                             
@@ -146,9 +148,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1kx5CHkMxCHju78x63iUegJy5phptT_hU/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Kerja Bengkel 1" data-url="https://drive.google.com/file/d/1kx5CHkMxCHju78x63iUegJy5phptT_hU/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -160,9 +162,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1_ZC8nQU3PoHeerFv8SPd_JM3objIAC5x/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Desain Produk Teknik" data-url="https://drive.google.com/file/d/1_ZC8nQU3PoHeerFv8SPd_JM3objIAC5x/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -188,9 +190,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1n2Y8V941s6CoQoX1WvWSJNzSE-IG0DUs/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Elektronika Dasar" data-url="https://drive.google.com/file/d/1n2Y8V941s6CoQoX1WvWSJNzSE-IG0DUs/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -202,9 +204,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1m2-44PQZF31yvSMU2LIjtHQGYssvy4v1/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Mikrokontroler" data-url="https://drive.google.com/file/d/1m2-44PQZF31yvSMU2LIjtHQGYssvy4v1/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -216,9 +218,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2023</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1jnzh98l2MLs3ejMBIIdgvVQ14hmCQKPW/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Mesin Listrik" data-url="https://drive.google.com/file/d/1jnzh98l2MLs3ejMBIIdgvVQ14hmCQKPW/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -230,9 +232,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/12CHsosel0ExTW84xu168tzYzsUlZXAxi/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Instalasi Listrik Residensial" data-url="https://drive.google.com/file/d/12CHsosel0ExTW84xu168tzYzsUlZXAxi/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -244,9 +246,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/13dSjuXmSAS4Z-MN321AEBVWMRLOdGtCM/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Gambar Instalasi Listrik" data-url="https://drive.google.com/file/d/13dSjuXmSAS4Z-MN321AEBVWMRLOdGtCM/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -258,9 +260,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2023</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1wXDyXixDmEVLIp-wR6mYvaT2kuLYyAtZ/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Kerja Bengkel 2" data-url="https://drive.google.com/file/d/1wXDyXixDmEVLIp-wR6mYvaT2kuLYyAtZ/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -272,9 +274,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2023</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/12YnPEF9uuNDJlpmOy6rClRRfNXrFmmfS/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Audit Energi" data-url="https://drive.google.com/file/d/12YnPEF9uuNDJlpmOy6rClRRfNXrFmmfS/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -286,9 +288,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2023</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1PuUs5ImDdsXs221o5LLrSnB69jKqSvP8/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Proteksi Sistem Tenaga Listrik" data-url="https://drive.google.com/file/d/1PuUs5ImDdsXs221o5LLrSnB69jKqSvP8/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -300,9 +302,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2023</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1-5eiQUqQRSKyv0cqqJ_p5beOnooMcQC8/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Instalasi Listrik Industri" data-url="https://drive.google.com/file/d/1-5eiQUqQRSKyv0cqqJ_p5beOnooMcQC8/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -314,9 +316,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1bNKw-HuMnbDhjAYXvTmsednAusug2ywm/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Distribusi Tenaga Listrik" data-url="https://drive.google.com/file/d/1bNKw-HuMnbDhjAYXvTmsednAusug2ywm/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -328,9 +330,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1uXBevRDGWCP-sX1eFdT5yfxGQ7q8B9Wx/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Teknik Pengaturan Mesin Listrik" data-url="https://drive.google.com/file/d/1uXBevRDGWCP-sX1eFdT5yfxGQ7q8B9Wx/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -342,9 +344,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1eKP7Qd78yE5JFHmJo_DQNIR6KxEVF6Jx/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Transmisi Tenaga Listrik" data-url="https://drive.google.com/file/d/1eKP7Qd78yE5JFHmJo_DQNIR6KxEVF6Jx/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -356,9 +358,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2022</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1rvpa2aa3EiDzLCYIBVoxJIW-alUD6OfF/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Energi Terbarukan" data-url="https://drive.google.com/file/d/1rvpa2aa3EiDzLCYIBVoxJIW-alUD6OfF/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -370,9 +372,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2022</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1bUCqAP480TSqr3MfOCNUJ4LdL_z4CuuJ/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Elektronika Daya" data-url="https://drive.google.com/file/d/1bUCqAP480TSqr3MfOCNUJ4LdL_z4CuuJ/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -398,9 +400,9 @@
                                 <td class="text-center">2</td>
                                 <td class="text-center">2025</td>
                                 <td>
-                                    <a href="https://drive.google.com/file/d/1bzWp2lAtqTkZQV8xj02nfhUEGYYmMnGC/view?usp=sharing" class="btn btn-sm btn-primary w-100">
-                                        <i class="bi bi-download"></i> Unduh Modul
-                                    </a>
+                                    <button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="Praktikum Otomasi Industri" data-url="https://drive.google.com/file/d/1bzWp2lAtqTkZQV8xj02nfhUEGYYmMnGC/view?usp=sharing">
+                                        <i class="bi bi-eye me-1"></i> Preview Modul
+                                    </button>
                                 </td>
                             </tr>
 
@@ -423,6 +425,34 @@
             </div>
         </div>
     </main>
+
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-semibold" id="previewModalLabel">Preview Modul</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 position-relative">
+                    
+                    <div id="iframeLoading" class="text-center py-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Memuat...</span>
+                        </div>
+                        <p class="mt-2 text-muted small">Menyambungkan ke Google Drive...</p>
+                    </div>
+
+                    <iframe id="previewIframe" src="" width="100%" height="600px" style="border: none; display: none;" onload="document.getElementById('iframeLoading').style.display='none'; this.style.display='block';"></iframe>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="#" id="btnDownloadModul" target="_blank" class="btn btn-primary px-4">
+                        <i class="bi bi-download me-2"></i> Download Modul
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -451,6 +481,37 @@
                     table.column(3).search('^' + semesterVal + '$', true, false).draw();
                 }
             }
+
+            // --- FUNGSI LOGIKA PREVIEW MODAL ---
+            const previewModal = document.getElementById('previewModal');
+            previewModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const judul = button.getAttribute('data-judul');
+                const urlRaw = button.getAttribute('data-url');
+
+                const modalTitle = previewModal.querySelector('.modal-title');
+                modalTitle.textContent = "Preview: " + judul;
+
+                const btnDownload = document.getElementById('btnDownloadModul');
+                btnDownload.href = urlRaw;
+
+                let urlPreview = urlRaw;
+                if (urlRaw.includes('/view')) {
+                    urlPreview = urlRaw.replace(/\/view.*/, '/preview');
+                }
+
+                const iframe = document.getElementById('previewIframe');
+                const loading = document.getElementById('iframeLoading');
+                
+                iframe.style.display = 'none';
+                loading.style.display = 'block';
+                
+                iframe.src = urlPreview;
+            });
+
+            previewModal.addEventListener('hidden.bs.modal', function () {
+                document.getElementById('previewIframe').src = "";
+            });
         });
     </script>
 </body>
