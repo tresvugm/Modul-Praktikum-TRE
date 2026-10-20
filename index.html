@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modul Praktikum - TRE</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
-        .header-modul { background-color: #1e3a8a; color: white; padding: 40px 0; border-bottom: 5px solid #3b82f6; }
-        .btn-back { color: #dbeafe; text-decoration: none; display: inline-flex; align-items: center; margin-bottom: 15px; }
-        .btn-back:hover { color: white; text-decoration: underline; }
-        .filter-btn.active { background-color: #1e3a8a; color: white; }
-        .dropdown-item:hover { background-color: #eff6ff; color: #1e3a8a; }
-        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header-modul {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 40px 0;
+            border-bottom: 5px solid #3b82f6;
+        }
+
+        .btn-back {
+            color: #dbeafe;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-back:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .filter-btn.active {
+            background-color: #1e3a8a;
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #eff6ff;
+            color: #1e3a8a;
+        }
+
         /* Tambahan untuk iframe preview */
         #previewIframe {
             background-color: #e9ecef;
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top" style="border-bottom: 3px solid #1e3a8a;">
         <div class="container">
             <a class="navbar-brand" href="https://tresvugm.github.io/">
-                <img src="images/Logo TRE Banner (Colour).png" alt="Logo TRE UGM" height="45" class="d-inline-block align-text-top">
+                <img src="images/Logo TRE Banner (Colour).png" alt="Logo TRE UGM" height="45"
+                    class="d-inline-block align-text-top">
             </a>
-            
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUtama">
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarUtama">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarUtama">
-                                                <ul class="navbar-nav">
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Layanan TRE
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2"
+                            aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/">
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/">
                                     <i class="bi bi-house-door me-2 text-primary"></i> Beranda
                                 </a>
                             </li>
-                            <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/praktikum.html">
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/praktikum.html">
                                     <i class="bi bi-journal-code me-2 text-primary"></i> Praktikum
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/Magang-TRE/">
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/Magang-TRE/">
                                     <i class="bi bi-briefcase me-2 text-primary"></i> Magang
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/Tugas-Akhir-TRE/">
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/Tugas-Akhir-TRE/">
                                     <i class="bi bi-mortarboard me-2 text-primary"></i> Tugas Akhir
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/Prestasi-TRE/">
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/Prestasi-TRE/">
                                     <i class="bi bi-trophy me-2 text-primary"></i> Prestasi
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="https://tresvugm.github.io/Dokumen-Penunjang-TRE/">
+                                <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="https://tresvugm.github.io/Dokumen-Penunjang-TRE/">
                                     <i class="bi bi-folder2-open me-2 text-primary"></i> Dokumen Penunjang
                                 </a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                    </li>
+                </li>
                 </ul>
             </div>
         </div>
@@ -92,20 +134,29 @@
     <main class="container my-5">
         <div class="card shadow-sm border-0 rounded-3">
             <div class="card-body p-4">
-                
+
                 <div class="mb-4 d-flex gap-2 flex-wrap">
-                    <button class="btn btn-outline-primary btn-sm filter-btn active" onclick="filterSemester('All')">Semua Semester</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('1')">Semester 1</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('2')">Semester 2</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('3')">Semester 3</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('4')">Semester 4</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('5')">Semester 5</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('6')">Semester 6</button>
-                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('7')">Semester 7</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn active"
+                        onclick="filterSemester('All')">Semua Semester</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('1')">Semester
+                        1</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('2')">Semester
+                        2</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('3')">Semester
+                        3</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('4')">Semester
+                        4</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('5')">Semester
+                        5</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('6')">Semester
+                        6</button>
+                    <button class="btn btn-outline-primary btn-sm filter-btn" onclick="filterSemester('7')">Semester
+                        7</button>
                 </div>
 
                 <div class="table-responsive">
-                    <table id="tabelModul" class="table table-striped table-hover table-bordered align-middle" style="width:100%">
+                    <table id="tabelModul" class="table table-striped table-hover table-bordered align-middle"
+                        style="width:100%">
                         <thead class="table-dark">
                             <tr>
                                 <th width="5%">No</th>
@@ -129,10 +180,11 @@
             <div class="modal-content shadow">
                 <div class="modal-header bg-primary text-white border-0">
                     <h5 class="modal-title fw-semibold" id="previewModalLabel">Preview Modul</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 position-relative">
-                    
+
                     <div id="iframeLoading" class="text-center py-5">
                         <div class="spinner-border text-primary" role="status">
                             <span class="visually-hidden">Memuat...</span>
@@ -140,7 +192,8 @@
                         <p class="mt-2 text-muted small">Menyambungkan ke Google Drive...</p>
                     </div>
 
-                    <iframe id="previewIframe" src="" width="100%" height="600px" style="border: none; display: none;" onload="document.getElementById('iframeLoading').style.display='none'; this.style.display='block';"></iframe>
+                    <iframe id="previewIframe" src="" width="100%" height="600px" style="border: none; display: none;"
+                        onload="document.getElementById('iframeLoading').style.display='none'; this.style.display='block';"></iframe>
                 </div>
                 <div class="modal-footer bg-light border-0">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -164,42 +217,42 @@
         // Nomor urut akan otomatis dihitung ulang.
         // ============================================================
         const dataModul = [
-            { kode: "SVRE261107", nama: "Praktikum Pengukuran Listrik",                                    semester: 1, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261108", nama: "Praktikum Pemrograman Dasar",                                     semester: 1, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/12DNMlkGY6EK7VlLfgK_v9e6PaluMuNTU/view?usp=sharing" },
-            { kode: "SVRE261205", nama: "Praktikum Kerja Bengkel 1",                                       semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1kx5CHkMxCHju78x63iUegJy5phptT_hU/view?usp=sharing" },
-            { kode: "SVRE261206", nama: "Praktikum Desain Produk Teknik",                                  semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1_ZC8nQU3PoHeerFv8SPd_JM3objIAC5x/view?usp=sharing" },
-            { kode: "SVRE261207", nama: "Praktikum Rangkaian Listrik",                                     semester: 2, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261208", nama: "Praktikum Elektronika Dasar",                                     semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1n2Y8V941s6CoQoX1WvWSJNzSE-IG0DUs/view?usp=sharing" },
-            { kode: "SVRE261307", nama: "Praktikum Mikrokontroler dan PLC",                                 semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1m2-44PQZF31yvSMU2LIjtHQGYssvy4v1/view?usp=sharing" },
-            { kode: "SVRE261308", nama: "Praktikum Mesin Listrik",                                         semester: 3, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1jnzh98l2MLs3ejMBIIdgvVQ14hmCQKPW/view?usp=sharing" },
-            { kode: "SVRE261309", nama: "Praktikum Instalasi Listrik Residensial",                          semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/12CHsosel0ExTW84xu168tzYzsUlZXAxi/view?usp=sharing" },
-            { kode: "SVRE261310", nama: "Praktikum Gambar Instalasi Listrik",                               semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/13dSjuXmSAS4Z-MN321AEBVWMRLOdGtCM/view?usp=sharing" },
-            { kode: "SVRE261311", nama: "Praktikum Kerja Bengkel 2",                                       semester: 3, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1wXDyXixDmEVLIp-wR6mYvaT2kuLYyAtZ/view?usp=sharing" },
-            { kode: "SVRE261407", nama: "Praktikum Audit Energi",                                          semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/12YnPEF9uuNDJlpmOy6rClRRfNXrFmmfS/view?usp=sharing" },
-            { kode: "SVRE261408", nama: "Praktikum Proteksi Sistem Tenaga Listrik",                         semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1PuUs5ImDdsXs221o5LLrSnB69jKqSvP8/view?usp=sharing" },
-            { kode: "SVRE261409", nama: "Praktikum Instalasi Listrik Industri",                             semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1-5eiQUqQRSKyv0cqqJ_p5beOnooMcQC8/view?usp=sharing" },
-            { kode: "SVRE261410", nama: "Praktikum Distribusi Tenaga Listrik",                              semester: 4, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1bNKw-HuMnbDhjAYXvTmsednAusug2ywm/view?usp=sharing" },
-            { kode: "SVRE261502", nama: "Praktikum Teknik Pengaturan Mesin Listrik",                        semester: 5, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1uXBevRDGWCP-sX1eFdT5yfxGQ7q8B9Wx/view?usp=sharing" },
-            { kode: "SVRE261503", nama: "Praktikum Transmisi Tenaga Listrik",                               semester: 5, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1eKP7Qd78yE5JFHmJo_DQNIR6KxEVF6Jx/view?usp=sharing", hidden: true },
-            { kode: "SVRE261504", nama: "Praktikum Energi Baru dan Terbarukan",                             semester: 5, sks: 2, tahun: "2022", url: "https://drive.google.com/file/d/1rvpa2aa3EiDzLCYIBVoxJIW-alUD6OfF/view?usp=sharing" },
-            { kode: "SVRE261505", nama: "Praktikum Elektronika Daya",                                      semester: 5, sks: 2, tahun: "2022", url: "https://drive.google.com/file/d/1bUCqAP480TSqr3MfOCNUJ4LdL_z4CuuJ/view?usp=sharing" },
-            { kode: "SVRE261616", nama: "Praktikum Instalasi Listrik Gedung",                               semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261617", nama: "Praktikum Operasi dan Pemeliharaan Gardu Induk",                    semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261618", nama: "Praktikum Operasi dan Pemeliharaan Instalasi Listrik",              semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261619", nama: "Praktikum Operasi dan Pemeliharaan Mesin Listrik",                  semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261620", nama: "Praktikum Operasi dan Pemeliharaan Pembangkit Tenaga Listrik",      semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261621", nama: "Praktikum Operasi dan Pemeliharaan Sistem Distribusi Tenaga Listrik", semester: 6, sks: 2, tahun: "-",  url: null },
-            { kode: "SVRE261622", nama: "Praktikum Operasi dan Pemeliharaan Sistem EBT",                    semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261623", nama: "Praktikum Operasi dan Pemeliharaan Sistem Transmisi Tenaga Listrik", semester: 6, sks: 2, tahun: "-",  url: null },
-            { kode: "SVRE261624", nama: "Praktikum Pengaturan Mesin Listrik",                               semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261625", nama: "Praktikum Pengukuran dan Pengujian Peralatan Listrik",              semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261626", nama: "Praktikum Internet of Things (IoT) untuk Industri",                 semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261627", nama: "Praktikum PLC Terapan",                                           semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261628", nama: "Praktikum Sistem SCADA dan HMI",                                  semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261629", nama: "Praktikum Teknik Kendali",                                        semester: 6, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261706", nama: "Praktikum Optimisasi Sistem Tenaga Listrik",                       semester: 7, sks: 2, tahun: "-",    url: null },
-            { kode: "SVRE261707", nama: "Praktikum Otomasi Industri",                                      semester: 7, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1bzWp2lAtqTkZQV8xj02nfhUEGYYmMnGC/view?usp=sharing" },
-            { kode: "SVRE261708", nama: "Praktikum Perencanaan Sistem Tenaga Listrik",                      semester: 7, sks: 2, tahun: "-",    url: null },
+            { kode: "SVRE261107", nama: "Praktikum Pengukuran Listrik", semester: 1, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261108", nama: "Praktikum Pemrograman Dasar", semester: 1, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/12DNMlkGY6EK7VlLfgK_v9e6PaluMuNTU/view?usp=sharing" },
+            { kode: "SVRE261205", nama: "Praktikum Kerja Bengkel 1", semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1kx5CHkMxCHju78x63iUegJy5phptT_hU/view?usp=sharing" },
+            { kode: "SVRE261206", nama: "Praktikum Desain Produk Teknik", semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1_ZC8nQU3PoHeerFv8SPd_JM3objIAC5x/view?usp=sharing" },
+            { kode: "SVRE261207", nama: "Praktikum Rangkaian Listrik", semester: 2, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261208", nama: "Praktikum Elektronika Dasar", semester: 2, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1n2Y8V941s6CoQoX1WvWSJNzSE-IG0DUs/view?usp=sharing" },
+            { kode: "SVRE261307", nama: "Praktikum Mikrokontroler dan PLC", semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1m2-44PQZF31yvSMU2LIjtHQGYssvy4v1/view?usp=sharing" },
+            { kode: "SVRE261308", nama: "Praktikum Mesin Listrik", semester: 3, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1jnzh98l2MLs3ejMBIIdgvVQ14hmCQKPW/view?usp=sharing" },
+            { kode: "SVRE261309", nama: "Praktikum Instalasi Listrik Residensial", semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/12CHsosel0ExTW84xu168tzYzsUlZXAxi/view?usp=sharing" },
+            { kode: "SVRE261310", nama: "Praktikum Gambar Instalasi Listrik", semester: 3, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/13dSjuXmSAS4Z-MN321AEBVWMRLOdGtCM/view?usp=sharing", hidden: true },
+            { kode: "SVRE261311", nama: "Praktikum Kerja Bengkel 2", semester: 3, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1wXDyXixDmEVLIp-wR6mYvaT2kuLYyAtZ/view?usp=sharing" },
+            { kode: "SVRE261407", nama: "Praktikum Audit Energi", semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/12YnPEF9uuNDJlpmOy6rClRRfNXrFmmfS/view?usp=sharing" },
+            { kode: "SVRE261408", nama: "Praktikum Proteksi Sistem Tenaga Listrik", semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1PuUs5ImDdsXs221o5LLrSnB69jKqSvP8/view?usp=sharing", hidden: true },
+            { kode: "SVRE261409", nama: "Praktikum Instalasi Listrik Industri", semester: 4, sks: 2, tahun: "2023", url: "https://drive.google.com/file/d/1-5eiQUqQRSKyv0cqqJ_p5beOnooMcQC8/view?usp=sharing" },
+            { kode: "SVRE261410", nama: "Praktikum Distribusi Tenaga Listrik", semester: 4, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1bNKw-HuMnbDhjAYXvTmsednAusug2ywm/view?usp=sharing" },
+            { kode: "SVRE261502", nama: "Praktikum Teknik Pengaturan Mesin Listrik", semester: 5, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1uXBevRDGWCP-sX1eFdT5yfxGQ7q8B9Wx/view?usp=sharing" },
+            { kode: "SVRE261503", nama: "Praktikum Transmisi Tenaga Listrik", semester: 5, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1eKP7Qd78yE5JFHmJo_DQNIR6KxEVF6Jx/view?usp=sharing", hidden: true },
+            { kode: "SVRE261504", nama: "Praktikum Energi Baru dan Terbarukan", semester: 5, sks: 2, tahun: "2022", url: "https://drive.google.com/file/d/1rvpa2aa3EiDzLCYIBVoxJIW-alUD6OfF/view?usp=sharing" },
+            { kode: "SVRE261505", nama: "Praktikum Elektronika Daya", semester: 5, sks: 2, tahun: "2022", url: "https://drive.google.com/file/d/1bUCqAP480TSqr3MfOCNUJ4LdL_z4CuuJ/view?usp=sharing" },
+            { kode: "SVRE261616", nama: "Praktikum Instalasi Listrik Gedung", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261617", nama: "Praktikum Operasi dan Pemeliharaan Gardu Induk", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261618", nama: "Praktikum Operasi dan Pemeliharaan Instalasi Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261619", nama: "Praktikum Operasi dan Pemeliharaan Mesin Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261620", nama: "Praktikum Operasi dan Pemeliharaan Pembangkit Tenaga Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261621", nama: "Praktikum Operasi dan Pemeliharaan Sistem Distribusi Tenaga Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261622", nama: "Praktikum Operasi dan Pemeliharaan Sistem EBT", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261623", nama: "Praktikum Operasi dan Pemeliharaan Sistem Transmisi Tenaga Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261624", nama: "Praktikum Pengaturan Mesin Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261625", nama: "Praktikum Pengukuran dan Pengujian Peralatan Listrik", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261626", nama: "Praktikum Internet of Things (IoT) untuk Industri", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261627", nama: "Praktikum PLC Terapan", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261628", nama: "Praktikum Sistem SCADA dan HMI", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261629", nama: "Praktikum Teknik Kendali", semester: 6, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261706", nama: "Praktikum Optimisasi Sistem Tenaga Listrik", semester: 7, sks: 2, tahun: "-", url: null },
+            { kode: "SVRE261707", nama: "Praktikum Otomasi Industri", semester: 7, sks: 2, tahun: "2025", url: "https://drive.google.com/file/d/1bzWp2lAtqTkZQV8xj02nfhUEGYYmMnGC/view?usp=sharing" },
+            { kode: "SVRE261708", nama: "Praktikum Perencanaan Sistem Tenaga Listrik", semester: 7, sks: 2, tahun: "-", url: null },
         ];
 
         // ============================================================
@@ -209,26 +262,26 @@
         function renderModulRows() {
             const tbody = document.getElementById('modulTbody');
             let no = 1;
-            dataModul.forEach(function(m) {
+            dataModul.forEach(function (m) {
                 if (m.hidden) return; // lewati modul tersembunyi
 
                 let linkHtml;
                 if (m.url) {
                     linkHtml = '<button class="btn btn-sm btn-primary w-100" data-bs-toggle="modal" data-bs-target="#previewModal" data-judul="' + m.nama + '" data-url="' + m.url + '">'
-                             + '<i class="bi bi-eye me-1"></i> Preview Modul</button>';
+                        + '<i class="bi bi-eye me-1"></i> Preview Modul</button>';
                 } else {
                     linkHtml = '<button class="btn btn-sm btn-secondary w-100" disabled>'
-                             + '<i class="bi bi-hourglass-split"></i> Akan dikembangkan</button>';
+                        + '<i class="bi bi-hourglass-split"></i> Akan dikembangkan</button>';
                 }
 
                 const tr = document.createElement('tr');
                 tr.innerHTML = '<td>' + no + '</td>'
-                             + '<td>' + m.kode + '</td>'
-                             + '<td>' + m.nama + '</td>'
-                             + '<td class="text-center">' + m.semester + '</td>'
-                             + '<td class="text-center">' + m.sks + '</td>'
-                             + '<td class="text-center">' + m.tahun + '</td>'
-                             + '<td>' + linkHtml + '</td>';
+                    + '<td>' + m.kode + '</td>'
+                    + '<td>' + m.nama + '</td>'
+                    + '<td class="text-center">' + m.semester + '</td>'
+                    + '<td class="text-center">' + m.sks + '</td>'
+                    + '<td class="text-center">' + m.tahun + '</td>'
+                    + '<td>' + linkHtml + '</td>';
                 tbody.appendChild(tr);
                 no++;
             });
@@ -237,9 +290,9 @@
         // Render rows sebelum DataTables diinisialisasi
         renderModulRows();
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#tabelModul').DataTable({
-                "language": { 
+                "language": {
                     "search": "Cari Modul:",
                     "lengthMenu": "Tampilkan _MENU_ data",
                     "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
@@ -248,11 +301,11 @@
                 }
             });
 
-            window.filterSemester = function(semesterVal) {
+            window.filterSemester = function (semesterVal) {
                 $('.filter-btn').removeClass('active');
                 $(event.target).addClass('active');
 
-                if(semesterVal === 'All') {
+                if (semesterVal === 'All') {
                     table.column(3).search('').draw();
                 } else {
                     table.column(3).search('^' + semesterVal + '$', true, false).draw();
@@ -279,10 +332,10 @@
 
                 const iframe = document.getElementById('previewIframe');
                 const loading = document.getElementById('iframeLoading');
-                
+
                 iframe.style.display = 'none';
                 loading.style.display = 'block';
-                
+
                 iframe.src = urlPreview;
             });
 
@@ -292,4 +345,5 @@
         });
     </script>
 </body>
+
 </html>
